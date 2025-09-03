@@ -11,9 +11,18 @@ submit.onclick = function() {
     let totalShares = Number(numOfBoys.value) * 2 + Number(numOfGirls.value);
     let portion = newallMoney / totalShares;
 
-    let boyShare = portion * 2;
-    let girlShare = portion * 1;
-
+    if(Number(numOfBoys.value)>0){
+        let boyShare = portion * 2;
+    }
+    else{
+        let boyShare = 0;
+    }
+    if(Number(numOfGirls.value)>0){
+        let girlShare = portion * 1;
+    }
+    else{
+        let girlShare = 0;
+    }
     demo.innerHTML = `
     <h2 class="text-cyan-600 text-2xl">The All Money : <span class="text-white">${Number(allMoney.value)}</span></h2>
     <h2 class="text-cyan-600 text-2xl">Wife portion : <span class="text-white">${wifePortion}</span></h2>
