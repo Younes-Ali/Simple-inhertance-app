@@ -34,4 +34,7 @@ submit.onclick = function() {
     <h2 class="text-cyan-600 text-2xl">Each boy gets : <span class="text-white">${boyShare}</span></h2>
     <h2 class="text-cyan-600 text-2xl">Each girl gets : <span class="text-white">${girlShare}</span></h2>
     `;
+    allMoney.value = '';
+    numOfBoys.value = '';
+    numOfGirls.value = '';
 }
