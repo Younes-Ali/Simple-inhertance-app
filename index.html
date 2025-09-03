@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+</head>
+<body class="mx-0 text-white bg-zinc-800 my-5 font-mono">
+    <div class="cruds w-full sm:w-4/5 text-center m-auto px-4 sm:px-0">
+        <div class="header mb-5 uppercase">
+            <h1 class="mb-4 font-bold text-3xl sm:text-5xl">My Program</h1>
+            <h2 class="mb-4 font-semibold text-xl sm:text-3xl">Inhertance Distribution System</h2>
+        </div>
+        <div class="info mb-5">
+            <input class="border-cyan-600 p-3 w-full border-2 h-9 rounded bg-zinc-900 focus:bg-black hover:scale-105 outline-none mb-5" id="allMoney" type="number" placeholder="Enter all the Money"  required>
+            <input class="border-cyan-600 p-3 w-full border-2 h-9 rounded bg-zinc-900 focus:bg-black hover:scale-105 outline-none mb-5" id="numOfBoys" type="number" placeholder="Enter number of boys" required>
+            <input class="border-cyan-600 p-3 w-full border-2 h-9 rounded bg-zinc-900 focus:bg-black hover:scale-105 outline-none mb-5" id="numOfGirls" type="number" placeholder="Enter number of gs" required>
+            <button class="bg-cyan-600 p-1 w-full rounded-2xl hover:bg-cyan-500 text-black text-lg font-bold" id="submit">Create</button>
+        </div>
+        <div class="result">
+            <h1 class="text-4xl font-bold mb-5">Result</h1>
+            <div class="output text-left text-lg">
+                <p id="demo"></p>
+            </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+</body>
+</html>
