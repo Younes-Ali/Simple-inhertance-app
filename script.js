@@ -11,6 +11,13 @@ submit.onclick = function() {
         return;
     }
 
+    if(numOfBoys.value == ''){
+        numOfBoys.value = 0;
+    }
+    if(numOfGirls.value == ''){
+        numOfGirls.value = 0;
+    }
+
     let wifePortion;
     if(numOfBoys.value == 0){
         wifePortion = Number(allMoney.value) * (1 / 4);
@@ -40,12 +47,12 @@ submit.onclick = function() {
         girlShare = 0;
     }
     demo.innerHTML = `
-    <h2 class="text-cyan-600 text-2xl">The All Money : <span class="text-white">${Number(allMoney.value)}</span></h2>
-    <h2 class="text-cyan-600 text-2xl">Wife portion : <span class="text-white">${wifePortion}</span></h2>
-    <h2 class="text-cyan-600 text-2xl">All boys get : <span class="text-white">${boyShare * Number(numOfBoys.value)}</span></h2>
-    <h2 class="text-cyan-600 text-2xl">All girls get : <span class="text-white">${girlShare * Number(numOfGirls.value)}</span></h2>
-    <h2 class="text-cyan-600 text-2xl">Each boy gets : <span class="text-white">${boyShare}</span></h2>
-    <h2 class="text-cyan-600 text-2xl">Each girl gets : <span class="text-white">${girlShare}</span></h2>
+        <h2 class="text-cyan-600 text-2xl">The All Money : <span class="text-white">${Number(allMoney.value)}</span></h2>
+        <h2 class="text-cyan-600 text-2xl">Wife portion : <span class="text-white">${wifePortion}</span></h2>
+        <h2 class="text-cyan-600 text-2xl">All boys get : <span class="text-white">${boyShare * Number(numOfBoys.value)}</span></h2>
+        <h2 class="text-cyan-600 text-2xl">All girls get : <span class="text-white">${girlShare * Number(numOfGirls.value)}</span></h2>
+        <h2 class="text-cyan-600 text-2xl">Each boy gets : <span class="text-white">${boyShare}</span></h2>
+        <h2 class="text-cyan-600 text-2xl">Each girl gets : <span class="text-white">${girlShare}</span></h2>
     `;
     allMoney.value = '';
     numOfBoys.value = '';
