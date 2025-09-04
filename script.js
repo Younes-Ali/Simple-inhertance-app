@@ -5,7 +5,20 @@ let submit = document.getElementById('submit');
 let demo = document.getElementById('demo');
 
 submit.onclick = function() {
-    let wifePortion = Number(allMoney.value) * (1 / 8);
+
+    if(allMoney.value < 0 || numOfBoys.value < 0 || numOfGirls.value < 0){
+        alert("Please enter valid values");
+        return;
+    }
+
+    let wifePortion;
+    if(numOfBoys.value == 0){
+        wifePortion = Number(allMoney.value) * (1 / 4);
+    }
+    else{
+        wifePortion = Number(allMoney.value) * (1 / 8);
+    }
+
     let newallMoney = Number(allMoney.value) - wifePortion;
 
     let totalShares = Number(numOfBoys.value) * 2 + Number(numOfGirls.value);
